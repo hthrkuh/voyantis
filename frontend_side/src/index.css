@@ -1,0 +1,194 @@
+:root {
+  --primary-color: #003246;
+  --secondary-color: #ffffff;
+  --background-color: #f2f0ee;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: Arial, sans-serif;
+  color: var(--primary-color);
+  padding: 20px;
+
+
+  background-color: #f2f0ee;
+  background-image: url(https://cdn.prod.website-files.com/606bfdb804bc7a3e32538a79/6460c94d30fbaaf79ebb12c3_Mobile%20Version%2023.jpg);
+  background-position: 50% 0;
+  background-size: cover
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.queue-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background-color: var(--background-color);
+}
+
+.queue-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+}
+
+.queue-item span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.queue-item button {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.queue-item button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.queue-selection {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.queue-selection select {
+  padding: 8px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.queue-selection button {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.queue-selection button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.queue-selection .loading-text {
+  font-size: 14px;
+  color: var(--primary-color);
+  text-align: center;
+  padding: 10px;
+}
+
+.message-display {
+  padding: 15px;
+  background-color: var(--message-background-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+}
+
+.message-display h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.message-display pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+  font-size: 14px;
+  background-color: var(--background-color-light);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.loading {
+  font-size: 18px;
+  color: var(--primary-color);
+  text-align: center;
+  padding: 20px;
+}
+
+.messages-not-found {
+  font-size: 16px;
+  color: var(--error-color);
+  text-align: center;
+  padding: 20px;
+}
+
+
+.add-queue-form {
+  padding: 20px;
+  background-color: var(--form-background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.add-queue-form h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: var(--primary-color);
+}
+
+.add-queue-form input {
+  width: calc(100% - 22px); /* Full width minus padding */
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.add-queue-form input::placeholder {
+  color: var(--placeholder-color);
+}
+
+.add-queue-form button {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.add-queue-form button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.add-queue-form button:disabled {
+  background-color: var(--disabled-color);
+  cursor: not-allowed;
+}
+
+.add-queue-form .error-message {
+  color: var(--error-color);
+  font-size: 14px;
+  margin-top: 10px;
+}
